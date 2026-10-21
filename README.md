@@ -1,32 +1,25 @@
-# React + TypeScript + Vite
+# a11y-checklist
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A compact, **shareable accessibility checklist** for shipping UI.
 
-Currently, two official plugins are available:
+- Grouped by WCAG pillars: Perceivable / Operable / Understandable / Robust
+- Progress bar + open/done filters
+- Checked state lives in the **URL hash** (`#c=id1,id2`) — copy the link to share a review
+- Skip link, visible focus, semantic checkboxes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This is a curated starter list, not a replacement for the full WCAG.
 
-## React Compiler
+## Run
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Add checklist items
+
+Edit `src/data/checklist.ts` and open a PR.
+
+## License
+
+MIT
